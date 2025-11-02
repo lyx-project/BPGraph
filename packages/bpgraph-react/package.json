@@ -1,7 +1,7 @@
 {
   "name": "@bpgraph/react",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "main": "build/index.es.js",
   "types": "build/index.d.ts",

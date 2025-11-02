@@ -1,6 +1,6 @@
 # 🧩 @bpgraph/core
 
-**bpgraph** is a lightweight node-based visual programming library built on top of [JointJS](https://www.jointjs.com/).
+**bpgraph** is a lightweight node-based visual programming library.
 It allows you to easily build interactive flow editors for low-code platforms, AI pipelines, or data processing systems.
 
 ---
@@ -10,7 +10,6 @@ It allows you to easily build interactive flow editors for low-code platforms, A
 * 🔧 **Node System** – Define and register custom nodes via `NodeRegistry`.
 * ⚙️ **Runtime Execution** – Manage node logic execution with `Runtime`.
 * 🎨 **Custom Styling** – Fully customizable node styles (header color, input box width, etc.).
-* 🧱 **Built on JointJS** – Reliable rendering and interaction engine.
 * 🪶 **Lightweight Design** – Simple, minimal, and easy to extend.
 
 ---

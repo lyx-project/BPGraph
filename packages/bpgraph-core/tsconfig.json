@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": false,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "build/types",
+    "declaration": true,
+    "sourceMap": true,
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "emitDeclarationOnly": true
+  },
+  "include": ["src/index.ts", "src/engine/index.ts"],
+  "exclude": ["node_modules", "dist", "build", "tests", "**/*.test.ts"]
+}

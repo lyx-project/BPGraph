@@ -1,0 +1,28 @@
+#!/bin/bash
+
+set -e
+
+FILES=$(git diff --cached --name-only -z)
+
+JS_FILES=$(printf '%s' "$FILES" | tr '\0' '\n' | grep -E "^packages/.*/.*\.(ts|tsx|vue)$" || true)
+CSS_FILES=$(printf '%s' "$FILES" | tr '\0' '\n' | grep -E "^packages/.*/.*\.(css|vue)$" || true)
+
+if [ -n "$JS_FILES" ]; then
+  echo "$JS_FILES" | xargs npx eslint --fix -f unix
+fi
+
+if [ -n "$CSS_FILES" ]; then
+  echo "$CSS_FILES" | xargs npx stylelint --fix --formatter string
+fi
+
+CHANGED_PACKAGES=$(git diff --cached --name-only | grep '^packages/' | awk -F/ '{print $2}' | sort | uniq)
+for pkg in $CHANGED_PACKAGES; do
+  PKG_JSON="packages/$pkg/package.json"
+  if [ -f "$PKG_JSON" ]; then
+    PKG_NAME=$(jq -r '.name' "$PKG_JSON")
+    HAS_TEST=$(jq -r '.scripts.test // empty' "$PKG_JSON")
+    if [ -n "$PKG_NAME" ] && [ -n "$HAS_TEST" ]; then
+      pnpm --filter "$PKG_NAME" test
+    fi
+  fi
+done

@@ -1,0 +1,38 @@
+{
+  "name": "@bpgraph/react",
+  "private": false,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "build/index.es.js",
+  "types": "build/index.d.ts",
+  "files": [
+    "build/**/*"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "test": "vitest run --reporter verbose"
+  },
+  "peerDependencies": {
+    "@bpgraph/core": "^0.0.0",
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "dependencies": {
+    "@bpgraph/core": "workspace:^",
+    "lucide-react": "^0.544.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@types/styled-components": "^5.1.34",
+    "@vitejs/plugin-react-swc": "^4.0.1",
+    "vite": "^7.1.5",
+    "vite-plugin-css-injected-by-js": "^3.5.2",
+    "vite-plugin-dts": "^4.5.4"
+  }
+}

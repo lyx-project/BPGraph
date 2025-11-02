@@ -1,0 +1,7 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./packages/bpgraph-core" },
+    { "path": "./packages/bpgraph-react" }
+  ]
+}

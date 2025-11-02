@@ -1,0 +1,34 @@
+{
+  "name": "@bpgraph/core",
+  "version": "0.0.0",
+  "private": false,
+  "type": "module",
+  "files": [
+    "build/**/*"
+  ],
+  "exports": {
+    ".": {
+      "import": "./build/index.mjs",
+      "types": "./build/types/index.d.ts"
+    },
+    "./engine": {
+      "import": "./build/engine/index.mjs",
+      "types": "./build/types/engine/index.d.ts"
+    }
+  },
+  "scripts": {
+    "clean": "rimraf build",
+    "build": "npm run clean && concurrently 'rolldown -c rolldown.config.ts' 'tsc -b tsconfig.app.json'",
+    "test": "vitest run --reporter verbose",
+    "lint": "eslint .",
+    "build:watch": "concurrently 'rolldown -c rolldown.config.ts --watch' 'tsc -b --watch tsconfig.app.json'"
+  },
+  "dependencies": {
+    "@joint/core": "^4.1.3"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "rolldown": "1.0.0-beta.32",
+    "vite-plugin-dts": "^4.5.4"
+  }
+}

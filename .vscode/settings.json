@@ -1,0 +1,26 @@
+{
+  "eslint.validate": ["typescript", "typescriptreact", "vue"],
+  "eslint.format.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit"
+  },
+  "eslint.quiet": false,
+  "files.associations": {
+    "packages/**/*.css": "tailwindcss"
+  },
+  "eslint.workingDirectories": [
+    { "mode": "auto" }
+  ],
+  "eslint.useFlatConfig": true,
+  "stylelint.validate": [
+    "vue",
+    "tailwindcss",
+    "css"
+  ],
+  "stylelint.enable": true,
+  "css.customData": [".vscode/tailwind.json"],
+  "[css]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+}

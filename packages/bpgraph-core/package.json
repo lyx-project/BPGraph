@@ -1,10 +1,11 @@
 {
   "name": "@bpgraph/core",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": false,
   "type": "module",
   "files": [
-    "build/**/*"
+    "build/**/*",
+    "LICENSE"
   ],
   "publishConfig": {
     "access": "public"
@@ -33,5 +34,11 @@
     "concurrently": "^9.2.1",
     "rolldown": "1.0.0-beta.32",
     "vite-plugin-dts": "^4.5.4"
-  }
+  },
+  "keywords": [
+    "blueprint",
+    "workflow",
+    "node-based",
+    "flow-editor"
+  ]
 }

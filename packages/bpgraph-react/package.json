@@ -1,12 +1,13 @@
 {
   "name": "@bpgraph/react",
   "private": false,
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "main": "build/index.es.js",
   "types": "build/index.d.ts",
   "files": [
-    "build/**/*"
+    "build/**/*",
+    "LICENSE"
   ],
   "publishConfig": {
     "access": "public"
@@ -37,5 +38,11 @@
     "vite": "^7.1.5",
     "vite-plugin-css-injected-by-js": "^3.5.2",
     "vite-plugin-dts": "^4.5.4"
-  }
+  },
+  "keywords": [
+    "blueprint",
+    "workflow",
+    "node-based",
+    "flow-editor"
+  ]
 }
